@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PU Gujranwala Campus</title>
+    <style>
+        .styled-body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .styled-header {
+            background-color: #003366;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .styled-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .styled-h1 {
+            color: #003366;
+        }
+        .styled-p {
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .styled-button {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .styled-button:hover {
+            background-color: #005bb5;
+        }
+        .styled-footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body id="body">
+    <header id="header">
+        <h1 id="h1">University of the Punjab Gujranwala Campus</h1>
+    </header>
+    <div id="container">
+        <h2>About PU Gujranwala Campus</h2>
+        <p id="text">PU Gujranwala Campus is a distinguished institution known for its academic excellence and vibrant campus life.</p>
+        
+        <h2>Departments</h2>
+        <ul id="departmentList">
+            <li>Department of Business Administration</li>
+            <li>Department of Commerce</li>
+            <li>Department of Computer Science</li>
+            <li>Department of Law</li>
+        </ul>
+
+        <h2>Facilities</h2>
+        <p id="facilityText">The campus offers state-of-the-art facilities including a library, computer labs, sports complexes, and more.</p>
+        
+        <button id="toggleButton">Toggle Styling</button>
+    </div>
+
+    
+    <script>
+        document.getElementById("toggleButton").addEventListener("click", function() {
+            var body = document.getElementById("body");
+            var header = document.getElementById("header");
+            var h1 = document.getElementById("h1");
+            var container = document.getElementById("container");
+            var text = document.getElementById("text");
+            var facilityText = document.getElementById("facilityText");
+            var departmentList = document.getElementById("departmentList");
+            var button = document.getElementById("toggleButton");
+            var footer = document.getElementById("footer");
+
+            body.classList.toggle("styled-body");
+            header.classList.toggle("styled-header");
+            h1.classList.toggle("styled-h1");
+            container.classList.toggle("styled-container");
+            text.classList.toggle("styled-p");
+            facilityText.classList.toggle("styled-p");
+            departmentList.classList.toggle("styled-p");
+            button.classList.toggle("styled-button");
+            footer.classList.toggle("styled-footer");
+        });
+    </script>
+</body>
+</html>
