@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+  <script></script>
+</head>
+
+<body>
+  <div>
+
+  </div>
+
+  <script>
+
+    $(document).ready(() => {
+      $("div").css({
+        "height": "200px",
+        "width": "200px",
+        "background-color": "black",
+        "position": "absolute",
+        "left": "0px",
+        "top": "0px"
+      })
+      function beforeAnimation() {
+        $('div').animate({
+          "left": "200px",
+          "top": "200px",
+          "height": "300px",
+          "width": "300px"
+        }, 1000, afterAnimation)
+      };
+
+      function afterAnimation() {
+        $('div').animate({
+          "left": "0px",
+          "top": "0px",
+          "height": "200px",
+          "width": "200px"
+        }, 1000, beforeAnimation)
+      };
+      beforeAnimation();
+      });
+
+      
+  </script>
+
+
+</body>
+
+</html>
